@@ -1,17 +1,39 @@
 Framing the Problem
 What is the problem you are trying to solve? Who does it affect?
 
+Digital content consumers often experience moments of confusion while watching online videos, such as dificulty understanding a phrase, concept or process. To resolve these uncertainities, they often consult external resources including online searches or AI platforms. This interrupts the viewing experience, increasing time to comprehend content and reducing overall user engagement.
+
+
 Idea Explanation
 What is your idea? How does it fix the problem?
+
+The WaitWhat? application enhances video consumption by detecting confusion in real time through facial expression analysis. Once detected, the application identifies the precise moment in the video and relevant content segment. The user is then offered an optional AI-generated explanation via a chatbot, providing deeper insight into the what, how, and why of the content. By delievering context-specific clarifications, WaitWhat? reduces the time and effort users spend formulating questions or searching for answers, creating a smoother, more engaging viewing experience. 
+
 
 Implementation
 How do all the pieces fit together? Does your frontend make requests to your backend? Where does your database fit in?
 
+Stage 1:
+While the user is watching a video, the webcam records frames at regular intervals (every 2 seconds) and analyzes facial expressions using the DeepFace model to detect emotions. If the system detects confusion, it marks the corresponding time frame and passes this segment to the next stage for further processing.
+Stage 2:
+In this stage, the identified time frame, along with the surrounding video context, is processed. The Whisper model transcribes the video’s audio into text, and the BART model summarizes the full video content. This information is then provided to Ollama 3.2:3b, a lightweight text completion model, which generates what, why, and how questions related to the confusing segment.
+The user can choose a question of interest to receive a detailed explanation or answer from the same model. If the user prefers, they can skip the suggestions and continue watching the video, allowing the system to detect and respond to confusion in subsequent parts automatically.
+Currently, the frontend includes a video player that streams a single hardcoded YouTube video. In future iterations, the system will be developed as a Chrome extension, enabling it to monitor any video the user watches. The process repeats until the video has been viewed completely.
+
+
 Challenges
 What did you struggle with? How did you overcome it?
+
+During model training, the DeepFace AI model responsible for detecting confusion from facial expressions demonstrated signs of overfitting on the limited dataset. To address this, we expanded the training dataset by combining expressions of sadness, fear, and surprise, as these share similar facial features with confusion, and considered it if the combined score is above 30%. This approach helped the model learn a broader representation of confusion, improving its accuracy and robustness. 
+
 
 Accomplishments
 What did you learn? What did you accomplish?
 
+We learned how to integrate mulitple AI components, including facial emotion recognition, audio-to-text transcription, and context-based question generation, into a single cohesive system. Through this process, we developed the ability to detect and track a user’s confused state in real time and generate relevant, AI-driven explanations to address it. This project strengthened our understanding of multimodal data integration, model optimization, and the practical challenges of creating an emotion-aware video assistant. 
+
+
 Next Steps
 What are the next steps for your project? How can you improve it?
+
+The application can be further developed into a Chrome extension, enabling emotion detection across any video platform rather than a single uploaded video. This would allow the AI chatbot to provide context-aware explanations based on a user's overall viewing experience. Rather than only detecting confusion, the model could be expanded to recognize additional emotions, such as "Aha!" moments to automatically save key timestamps for future references. Additionally, the current application only supports English due to its audio-to-text model. Extending language will enhance accessibility and make it more inclusive. 
