@@ -22,4 +22,4 @@ Viewers often experience confusion while watching videos when they encounter unc
 - **APIs:** YouTube API, OpenAI API
 
 ## Deno Video
-[![Watch the video](https://youtu.be/1p2ZrPKap90)
+[![Watch the video]](https://youtu.be/1p2ZrPKap90)
