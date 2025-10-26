@@ -21,3 +21,5 @@ Viewers often experience confusion while watching videos when they encounter unc
 - **AI/ML:** OpenCV,Bart transformer, vit-face-expression, Whisper, FER (Facial Emotion Recognition), TensorFlow  
 - **APIs:** YouTube API, OpenAI API
 
+## Deno Video
+[![Watch the video](https://youtu.be/1p2ZrPKap90)
