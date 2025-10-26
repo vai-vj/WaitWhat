@@ -1,5 +1,5 @@
 # WaitWhat?
-**Catch confusion before it catches you.**
+**Catch confusion before it catches you.**  
 AI-driven clarity for every moment of confusion.
 
 ## Overview
