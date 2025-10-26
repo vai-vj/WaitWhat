@@ -86,4 +86,4 @@ Whether you’re watching an educational lecture, tutorial, or documentary, *Wai
 
 You can test the application using the following sample YouTube video:
 
-[🔗 Watch on YouTube](https://www.youtube.com/watch?v=1p2ZrPKap90
+[🔗 Watch on YouTube](https://www.youtube.com/watch?v=1p2ZrPKap90)
