@@ -1,0 +1,17 @@
+Framing the Problem
+What is the problem you are trying to solve? Who does it affect?
+
+Idea Explanation
+What is your idea? How does it fix the problem?
+
+Implementation
+How do all the pieces fit together? Does your frontend make requests to your backend? Where does your database fit in?
+
+Challenges
+What did you struggle with? How did you overcome it?
+
+Accomplishments
+What did you learn? What did you accomplish?
+
+Next Steps
+What are the next steps for your project? How can you improve it?
